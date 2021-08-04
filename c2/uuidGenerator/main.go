@@ -8,10 +8,10 @@ import (
 )
 
 // UUID is a custom multiplexer
-type UUID struct {}
+type UUID struct{}
 
-func (u *UUID) ServeHTTP(w http.ResponseWriter, r *http.Request)  {
-	if r.URL.Path == "/gen"{
+func (u *UUID) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path == "/gen" {
 		givenRandomUUID(w, r)
 		return
 	}
@@ -19,21 +19,21 @@ func (u *UUID) ServeHTTP(w http.ResponseWriter, r *http.Request)  {
 	return
 }
 
-func givenRandomUUID(w http.ResponseWriter, r *http.Request)  {
+func givenRandomUUID(w http.ResponseWriter, r *http.Request) {
 
-	b:=make ([]byte, 10)
+	b := make([]byte, 10)
 	_, err := rand.Read(b)
-	if err != nil{
+	if err != nil {
 		panic(err)
 	}
 	_, err = fmt.Fprintf(w, fmt.Sprintf("%x", b))
 
-	if err != nil{
+	if err != nil {
 		panic(err)
 	}
 }
 
-func main()  {
+func main() {
 	mux := &UUID{}
 
 	log.Fatal(http.ListenAndServe(":8888", mux))

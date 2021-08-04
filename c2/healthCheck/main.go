@@ -7,15 +7,15 @@ import (
 	"time"
 )
 
-func HealthCheck(w http.ResponseWriter, r *http.Request)  {
+func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	currentTime := time.Now()
 	_, err := io.WriteString(w, currentTime.String())
-	if err != nil{
+	if err != nil {
 		log.Fatal(err)
 	}
 }
 
-func main()  {
+func main() {
 	http.HandleFunc("/health", HealthCheck)
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }

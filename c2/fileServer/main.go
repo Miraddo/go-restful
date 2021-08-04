@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-func main()  {
+func main() {
 	router := httprouter.New()
 
 	// Mapping to methods is possible with HttpRouter

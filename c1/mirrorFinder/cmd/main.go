@@ -64,4 +64,3 @@ func main() {
 	fmt.Printf("Starting server on port %s \n", port)
 	log.Fatal(server.ListenAndServe())
 }
-
