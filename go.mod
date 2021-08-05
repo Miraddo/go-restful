@@ -10,4 +10,5 @@ require (
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/julienschmidt/httprouter v1.3.0 // indirect
 	github.com/justinas/alice v1.2.0 // indirect
+	github.com/mattn/go-sqlite3 v1.14.8 // indirect
 )
