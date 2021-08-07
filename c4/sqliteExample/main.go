@@ -21,6 +21,7 @@ func main()  {
 
 	// Create table
 	statement, err := db.Prepare("CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, isbn INTEGER, author VARCHAR(64), name VARCHAR(64) NULL)")
+
 	if err != nil {
 		log.Println("Error in creating table")
 	} else {
@@ -42,6 +43,7 @@ func dbOperations(db *sql.DB) {
 		log.Println(err)
 	}
 	log.Println("Inserted the book into database!")
+
 	// Read
 	rows, _ := db.Query("SELECT id, name, author FROM books")
 	var tempBook Book
@@ -53,6 +55,7 @@ func dbOperations(db *sql.DB) {
 		log.Printf("ID:%d, Book:%s, Author:%s\n", tempBook.id,
 			tempBook.name, tempBook.author)
 	}
+
 	// Update
 	statement, _ = db.Prepare("update books set name=? where id=?")
 	_, err = statement.Exec("The Tale of Two Cities", 1)
@@ -60,6 +63,7 @@ func dbOperations(db *sql.DB) {
 		log.Println(err)
 	}
 	log.Println("Successfully updated the book in database!")
+
 	//Delete
 	statement, _ = db.Prepare("delete from books where id=?")
 	_, err = statement.Exec(1)
