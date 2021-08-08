@@ -6,6 +6,7 @@ import (
 )
 
 func Initialize(dbDriver *sql.DB) {
+	// creating train table
 	statement, driverError := dbDriver.Prepare(train)
 	if driverError != nil {
 		log.Println(driverError)
@@ -15,11 +16,14 @@ func Initialize(dbDriver *sql.DB) {
 	if statementError != nil {
 		log.Println("Table already exists!")
 	}
+	// creating station table
 	statement, _ = dbDriver.Prepare(station)
 	_, err := statement.Exec()
 	if err != nil {
 		return
 	}
+
+	// creating schedule table
 	statement, _ = dbDriver.Prepare(schedule)
 	_, err = statement.Exec()
 	if err != nil {
