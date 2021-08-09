@@ -5,13 +5,6 @@ import (
 	"gorm.io/gorm"
 )
 
-const (
-	host = "127.0.0.1"
-	port = 5432
-	user = "postgres"
-	password = "123456"
-	dbname = "mydb"
-)
 
 type Shipment struct {
 	gorm.Model
@@ -44,9 +37,7 @@ func InitDB() (*gorm.DB, error){
 	if err != nil {
 		return nil, err
 	}
-	err = db.AutoMigrate(&Shipment{}, &Package{})
-	if err != nil {
-		return nil, err
-	}
+	db.AutoMigrate(&Shipment{}, &Package{})
+
 	return db, nil
 }
