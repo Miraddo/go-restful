@@ -28,7 +28,7 @@ func getStats(url string) *grequests.Response{
 
 func main() {
 	var repos []Repo
-	var repoUrl = "https://api.github.com/users/torvalds/repos"
+	var repoUrl = "https://api.github.com/users/Miraddo/repos"
 	resp := getStats(repoUrl)
 	err := resp.JSON(&repos)
 	if err != nil {
