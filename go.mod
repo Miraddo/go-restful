@@ -41,6 +41,8 @@ require (
 	github.com/revel/pathtree v0.0.0-20140121041023-41257a1839e9 // indirect
 	github.com/revel/revel v1.0.0
 	github.com/sdboyer/constext v0.0.0-20170321163424-836a14457353 // indirect
+	github.com/spf13/cobra v1.2.1 // indirect
+	github.com/spf13/viper v1.8.1 // indirect
 	github.com/twinj/uuid v1.0.0 // indirect
 	github.com/ugorji/go v1.2.6 // indirect
 	github.com/urfave/cli/v2 v2.3.0 // indirect
