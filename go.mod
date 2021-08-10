@@ -16,6 +16,7 @@ require (
 	github.com/go-stack/stack v1.8.0 // indirect
 	github.com/golang/dep v0.5.4 // indirect
 	github.com/golang/protobuf v1.5.2 // indirect
+	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/gorilla/rpc v1.2.0
@@ -25,6 +26,7 @@ require (
 	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/julienschmidt/httprouter v1.3.0
 	github.com/justinas/alice v1.2.0
+	github.com/levigross/grequests v0.0.0-20190908174114-253788527a1a // indirect
 	github.com/lib/pq v1.10.2 // indirect
 	github.com/mattn/go-colorable v0.1.8 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect
