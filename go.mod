@@ -43,6 +43,7 @@ require (
 	github.com/sdboyer/constext v0.0.0-20170321163424-836a14457353 // indirect
 	github.com/twinj/uuid v1.0.0 // indirect
 	github.com/ugorji/go v1.2.6 // indirect
+	github.com/urfave/cli/v2 v2.3.0 // indirect
 	github.com/xeonx/timeago v1.0.0-rc4 // indirect
 	go.mongodb.org/mongo-driver v1.7.1 // indirect
 	golang.org/x/net v0.0.0-20210805182204-aaa1db679c0d // indirect
